@@ -56,9 +56,9 @@ const todosEmpiezanLosLunes = () => {
 // 7
 const algunoNoConducePorLaDerecha = () => {
     /* Debe retornar si en alguno de los países no se conduce por la derecha (right) */
-    let conduceDerecha = data.some(pais => pais.car.side === "right");
+    let conduceNoDerecha = data.some(pais => pais.car.side !== "right");
 
-    return conduceDerecha;
+    return conduceNoDerecha;
 }
 
 // 8
