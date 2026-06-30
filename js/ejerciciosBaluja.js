@@ -11,7 +11,9 @@ const poblMundial = 8300000000;
 // 1
 const imprimirPaises = () => {
     /* Debe imprimir la info de todos los países (solo su nombre común y su capital) */
-    data.forEach(pais => console.log(`Nombre común: ${pais.name.common} || Capital: ${pais.capital}`));
+    data.forEach(pais => {
+        return console.log(`Nombre común: ${pais.name.common} - Capital: ${pais.capital[0]}`)
+    });
 }
 
 // 2
