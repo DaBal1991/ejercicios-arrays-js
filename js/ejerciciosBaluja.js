@@ -17,72 +17,54 @@ const imprimirPaises = () => {
 // 2
 const nombresDePaises = () => {
     /* Debe retornar un array con los nombres oficiales de cada país */
-    const nombresOficiales = data.map(pais => pais.name.official);
-
-    return nombresOficiales;
+    return nombresOficiales = data.map(pais => pais.name.official);
 }
 
 // 3
 const nombresDeCapitales = () => {
     /* Debe retornar un array con los nombres de las capitales de cada país */
-    const nombresCapitales = data.map(pais => pais.capital);
-    
-    return nombresCapitales; 
+    return nombresCapitales = data.map(pais => pais.capital);
 }
 
 // 4
 const poblacionTotal = () => {
     /* Debe retornar la población total de Sudamérica */
-    let poblacionSudamerica = data.reduce((acumulador, pais) => {return acumulador + pais.population}, 0);
-
-    return poblacionSudamerica;
+    return poblacionSudamerica = data.reduce((acumulador, pais) => {return acumulador + pais.population}, 0);
 }
 
 // 5
 const poblacionTotalMundialSinSud = (poblMundial) => {
     /* Debe retornar la población total mundial (llega por parámetro) sin reutilizar la función 'poblacionTotal', más bien restando sucesivamente la población de cada país a la población mundial */
-    let poblacionSinSud = data.reduce((acumulador, pais) => {return acumulador - pais.population}, poblMundial);
-
-    return poblacionSinSud;
+    return poblacionSinSud = data.reduce((acumulador, pais) => {return acumulador - pais.population}, poblMundial);
 }
 
 // 6
 const todosEmpiezanLosLunes = () => {
     /* Debe retornar si todos los países inician la semana los días lunes (monday) */
-    let arrancanLunes = data.every(pais => pais.startOfWeek === "monday");
-
-    return arrancanLunes;
+    return arrancanLunes = data.every(pais => pais.startOfWeek === "monday");
 }
 
 // 7
 const algunoNoConducePorLaDerecha = () => {
     /* Debe retornar si en alguno de los países no se conduce por la derecha (right) */
-    let conduceNoDerecha = data.some(pais => pais.car.side !== "right");
-
-    return conduceNoDerecha;
+    return conduceNoDerecha = data.some(pais => pais.car.side !== "right");
 }
 
 // 8
 const cualesNoConducenPorLaDerecha = () => {
     /* Debe retornar a los países donde no se conduce por la derecha (right) */
-    const noConducenDerecha = data.filter(pais => pais.car.side !== "right");
-    
-    return noConducenDerecha;
+    return noConducenDerecha = data.filter(pais => pais.car.side !== "right");
 }
 
 // 9
 const cualesNoConducenPorLaDerechaSimpl = () => {
     /* Debe retornar solo los nombres comunes de los países donde no se conduce por la derecha (right) */
-    const nombresNoConducenDerecha = data.filter(pais => pais.car.side !== "right").map(pais => pais.name.common);
-    
-    return nombresNoConducenDerecha;
+    return nombresNoConducenDerecha = data.filter(pais => pais.car.side !== "right").map(pais => pais.name.common);
 }
 
 // 10
 const paisesQueLimitanConArgentina = () => {
     /* Debe retornar solo los nombres comunes de los países que limitan con Argentina */
     /* WARNING: Hay países que no tienen esa info. A tenerlo en cuenta para evitar errores */
-    const limitanArgentina = data.filter(pais => pais.borders?.includes("ARG")).map(pais => pais.name.common)
-
-    return limitanArgentina;
+    return limitanArgentina = data.filter(pais => pais.borders?.includes("ARG")).map(pais => pais.name.common);
 }
