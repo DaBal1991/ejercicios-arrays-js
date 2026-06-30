@@ -6,7 +6,6 @@
 
 // Función de ejemplo, operando sobre la variable 'data' declarada en el archivo homónimo
 const cantPaises = (dataJson) => data.length;
-const poblMundial = 8300000000;
 
 // 1
 const imprimirPaises = (dataJson) => {
