@@ -70,7 +70,7 @@ console.log(cualesNoConducenPorLaDerecha());
 console.log(cualesNoConducenPorLaDerechaSimpl());
 
 /* 
-    10) Testear función cualesNoConducenPorLaDerechaSimpl. La consola del browser debería mostrar: 
+    10) Testear función paisesQueLimitanConArgentina. La consola del browser debería mostrar: 
     (5) ['Chile', 'Brazil', 'Uruguay', 'Bolivia', 'Paraguay']
 */
 console.log(paisesQueLimitanConArgentina());
