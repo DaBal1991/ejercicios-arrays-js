@@ -32,6 +32,7 @@ const nombresDeCapitales = () => {
 
 // 4
 const poblacionTotal = () => {
+    /* Debe retornar la población total de Sudamérica */
     let poblacionSudamerica = data.reduce((acumulador, pais) => {return acumulador + pais.population}, 0);
 
     return poblacionSudamerica;
