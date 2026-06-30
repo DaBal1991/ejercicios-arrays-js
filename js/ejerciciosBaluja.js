@@ -29,13 +29,13 @@ const nombresDeCapitales = () => {
 // 4
 const poblacionTotal = () => {
     /* Debe retornar la población total de Sudamérica */
-    return poblacionSudamerica = data.reduce((acumulador, pais) => {return acumulador + pais.population}, 0);
+    return poblacionSudamerica = data.reduce((acumulador, pais) => {acumulador + pais.population}, 0);
 }
 
 // 5
 const poblacionTotalMundialSinSud = (poblMundial) => {
     /* Debe retornar la población total mundial (llega por parámetro) sin reutilizar la función 'poblacionTotal', más bien restando sucesivamente la población de cada país a la población mundial */
-    return poblacionSinSud = data.reduce((acumulador, pais) => {return acumulador - pais.population}, poblMundial);
+    return poblacionSinSud = data.reduce((acumulador, pais) => {acumulador - pais.population}, poblMundial);
 }
 
 // 6
