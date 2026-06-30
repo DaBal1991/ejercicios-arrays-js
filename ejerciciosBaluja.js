@@ -11,7 +11,7 @@ const poblMundial = 8300000000;
 // 1
 const imprimirPaises = (dataJson) => {
     /* Debe imprimir la info de todos los países (solo su nombre común y su capital) */
-    data.forEach(pais => {
+    dataJson.forEach(pais => {
         return console.log(`Nombre común: ${pais.name.common} - Capital: ${pais.capital[0]}`)
     });
 }
@@ -19,54 +19,54 @@ const imprimirPaises = (dataJson) => {
 // 2
 const nombresDePaises = (dataJson) => {
     /* Debe retornar un array con los nombres oficiales de cada país */
-    return nombresOficiales = data.map(pais => pais.name.official);
+    return dataJson.map(pais => pais.name.official);
 }
 
 // 3
 const nombresDeCapitales = (dataJson) => {
     /* Debe retornar un array con los nombres de las capitales de cada país */
-    return nombresCapitales = data.map(pais => pais.capital);
+    return dataJson.map(pais => pais.capital);
 }
 
 // 4
 const poblacionTotal = (dataJson) => {
     /* Debe retornar la población total de Sudamérica */
-    return poblacionSudamerica = data.reduce((acumulador, pais) => {acumulador + pais.population}, 0);
+    return dataJson.reduce((acumulador, pais) => {acumulador + pais.population}, 0);
 }
 
 // 5
-const poblacionTotalMundialSinSud = (poblMundial) => {
+const poblacionTotalMundialSinSud = (poblMundial, dataJson) => {
     /* Debe retornar la población total mundial (llega por parámetro) sin reutilizar la función 'poblacionTotal', más bien restando sucesivamente la población de cada país a la población mundial */
-    return poblacionSinSud = data.reduce((acumulador, pais) => {acumulador - pais.population}, poblMundial);
+    return dataJson.reduce((acumulador, pais) => {acumulador - pais.population}, poblMundial);
 }
 
 // 6
 const todosEmpiezanLosLunes = (dataJson) => {
     /* Debe retornar si todos los países inician la semana los días lunes (monday) */
-    return arrancanLunes = data.every(pais => pais.startOfWeek === "monday");
+    return dataJson.every(pais => pais.startOfWeek === "monday");
 }
 
 // 7
 const algunoNoConducePorLaDerecha = (dataJson) => {
     /* Debe retornar si en alguno de los países no se conduce por la derecha (right) */
-    return conduceNoDerecha = data.some(pais => pais.car.side !== "right");
+    return dataJson.some(pais => pais.car.side !== "right");
 }
 
 // 8
 const cualesNoConducenPorLaDerecha = (dataJson) => {
     /* Debe retornar a los países donde no se conduce por la derecha (right) */
-    return noConducenDerecha = data.filter(pais => pais.car.side !== "right");
+    return dataJson.filter(pais => pais.car.side !== "right");
 }
 
 // 9
 const cualesNoConducenPorLaDerechaSimpl = (dataJson) => {
     /* Debe retornar solo los nombres comunes de los países donde no se conduce por la derecha (right) */
-    return nombresNoConducenDerecha = data.filter(pais => pais.car.side !== "right").map(pais => pais.name.common);
+    return dataJson.filter(pais => pais.car.side !== "right").map(pais => pais.name.common);
 }
 
 // 10
 const paisesQueLimitanConArgentina = (dataJson) => {
     /* Debe retornar solo los nombres comunes de los países que limitan con Argentina */
     /* WARNING: Hay países que no tienen esa info. A tenerlo en cuenta para evitar errores */
-    return limitanArgentina = data.filter(pais => pais.borders?.includes("ARG")).map(pais => pais.name.common);
+    return dataJson.filter(pais => pais.borders?.includes("ARG")).map(pais => pais.name.common);
 }
